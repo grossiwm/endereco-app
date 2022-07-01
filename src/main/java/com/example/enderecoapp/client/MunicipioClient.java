@@ -11,7 +11,7 @@ import com.example.enderecoapp.model.Municipio;
 @FeignClient(url = "${ibge-api.url}", name = "municipioClient")
 public interface MunicipioClient {
 	
-    @GetMapping(value = "/{id}/municipios")
-    List<Municipio> obterMunicipios(@PathVariable Integer id);
+    @GetMapping(value = "/estados/{UF}/municipios")
+    List<Municipio> obterMunicipios(@PathVariable(name = "UF") String siglaEstado);
     
 }

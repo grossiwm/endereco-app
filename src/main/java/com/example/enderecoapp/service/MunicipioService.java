@@ -13,7 +13,7 @@ public class MunicipioService {
     @Autowired
     MunicipioClient municipioClient;
 
-    public List<Municipio> obterLista(Integer id) {
-        return municipioClient.obterMunicipios(id);
+    public List<Municipio> obterLista(String estadoSigla) {
+        return municipioClient.obterMunicipios(estadoSigla);
     }
 }
