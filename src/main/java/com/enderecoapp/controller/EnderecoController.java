@@ -1,5 +1,5 @@
 
-package com.example.enderecoapp.controller;
+package com.enderecoapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.enderecoapp.model.Endereco;
-import com.example.enderecoapp.service.EnderecoService;
+import com.enderecoapp.model.Endereco;
+import com.enderecoapp.service.EnderecoService;
 
 @Controller
 public class EnderecoController {

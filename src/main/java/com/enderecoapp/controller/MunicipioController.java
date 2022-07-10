@@ -1,4 +1,4 @@
-package com.example.enderecoapp.controller;
+package com.enderecoapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.example.enderecoapp.service.MunicipioService;
+import com.enderecoapp.service.MunicipioService;
 
 @Controller
 public class MunicipioController {

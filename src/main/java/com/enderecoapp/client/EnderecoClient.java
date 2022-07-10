@@ -1,4 +1,4 @@
-package com.example.enderecoapp.client;
+package com.enderecoapp.client;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.example.enderecoapp.model.Endereco;
+import com.enderecoapp.model.Endereco;
 
 @FeignClient(url = "${endereco-api.url}", name = "enderecoClient")
 public interface EnderecoClient {

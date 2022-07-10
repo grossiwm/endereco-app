@@ -1,4 +1,4 @@
-package security;
+package com.enderecoapp.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,16 +7,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import repository.MyUserDetailsService;	@Autowired
-private MyUserDetailsService userDetailsService;
+
 
 @Configuration
 public class SecurityConfig {
 
-	@Bean
-	public UserDetailsService userDetailsService() {
-		return new MyUserDetailsService();
-	}
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 	
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -37,8 +36,4 @@ public class SecurityConfig {
 		return http.build();
     }
     
-	@Bean
-	public BCryptPasswordEncoder encoder() {
-		return new BCryptPasswordEncoder();
-	}
 }

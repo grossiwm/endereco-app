@@ -1,15 +1,23 @@
-package com.example.enderecoapp.model;
+package com.enderecoapp.model;
+
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name="TRole")
+@Getter
+@Setter
 public class Role implements GrantedAuthority {
 	private static final long serialVersionUID = 1L;
 	
@@ -18,6 +26,9 @@ public class Role implements GrantedAuthority {
 	private Integer id;
 	private String nome;
 	
+	@ManyToMany(mappedBy = "roles")
+	private List<Usuario> usuarios;
+
 	public Role() {
 		
 	}
@@ -30,22 +41,6 @@ public class Role implements GrantedAuthority {
 	public Role(Integer id) {
 		super();
 		this.id = id;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-	
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	public String getNome() {
-		return nome;
-	}
-	
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	@Override

@@ -1,12 +1,12 @@
-package com.example.enderecoapp.service;
+package com.enderecoapp.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.enderecoapp.client.MunicipioClient;
-import com.example.enderecoapp.model.Municipio;
+import com.enderecoapp.client.MunicipioClient;
+import com.enderecoapp.model.Municipio;
 
 @Service
 public class MunicipioService {

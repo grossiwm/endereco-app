@@ -1,12 +1,11 @@
-package com.example.enderecoapp.model;
+package com.enderecoapp.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Estado {
+public class Municipio {
     private Integer id;
-    private String sigla;
     private String nome;
 }
