@@ -22,7 +22,7 @@ public class RoleService {
 		return (List<Role>) roleRepository.findAll();
 	}
 
-	public Role obterPorId(String nome) {
+	public Role obterPorNome(String nome) {
 		return roleRepository.findByNome(nome);
 	}
 	

@@ -21,8 +21,11 @@ public class SecurityConfig {
     	
 		http.authorizeRequests()
 		.antMatchers("/usuario/**").permitAll()
-		.antMatchers("/enderecos").permitAll()
-		.antMatchers("/endereco/**").hasRole("ADMIN")
+		.antMatchers("/app").permitAll()
+		.antMatchers("/estabelecimentos").permitAll()
+		.antMatchers("/estabelecimento/**").hasRole("ADMIN")
+		.antMatchers("/funcionario/**").hasRole("ADMIN")
+		.antMatchers("/funcionarios").hasRole("ADMIN")
 		.anyRequest()
 		.authenticated()
 		.and()
